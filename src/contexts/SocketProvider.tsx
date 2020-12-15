@@ -14,7 +14,7 @@ export const SocketProvider: React.FC<{id: string}> = ({id, children}) => {
     const [socket, setSocket] = useState<any>()
 
     useEffect(() => {
-        const newSocket = io("http://localhost:5000", {query: {id}})
+        const newSocket = io("https://chati-server-socketio.herokuapp.com", {query: {id}})
 
         setSocket(newSocket)
 
